@@ -1,6 +1,6 @@
-# React Vite Project
+# Tenzies Game
 
-A React application Tenzies Game built using Vite for fast development and hot reload.
+A React application built using Vite for fast development and hot reload.
 
 ## Tech Stack
 - React
