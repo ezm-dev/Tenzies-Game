@@ -1,6 +1,7 @@
 import Die from "./Die"
 import { useState } from "react"
 import { nanoid } from "nanoid"
+import ConfettiWrapper from "./ConfettiWrapper"
 
 
 export default function App() {
@@ -44,15 +45,15 @@ export default function App() {
     ))
   }
 
-  // Another method
-  //   function generateAllNewDice(){
-  //     const arr=[]
-  //     for( let i=0; i<10 ; i++){
-  //         const num = Math.floor(Math.random()*6)+1
-  //         arr.push(num)
-  //     }
-  //     return arr
-  // }
+    // Another method
+    //   function generateAllNewDice(){
+    //     const arr=[]
+    //     for( let i=0; i<10 ; i++){
+    //         const num = Math.floor(Math.random()*6)+1
+    //         arr.push(num)
+    //     }
+    //     return arr
+    // }
 
   const diceElements = dice.map((die, index) =>
     <Die
@@ -65,6 +66,7 @@ export default function App() {
 
   return (
     <main>
+      {gameWon && <ConfettiWrapper />}
       <h1 className="title">Tenzies</h1>
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
     
